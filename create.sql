@@ -90,7 +90,7 @@ CREATE TABLE customer (
 ALTER TABLE customer ADD CONSTRAINT customer_pk PRIMARY KEY ( cust_id );
 
 CREATE TABLE zipcode (
-    zip_code  INTEGER NOT NULL,
+    zip_code  VARCHAR2(20) NOT NULL,
     country   VARCHAR2(50) NOT NULL
 );
 
@@ -99,7 +99,7 @@ ALTER TABLE zipcode ADD CONSTRAINT zipcode_pk PRIMARY KEY ( zip_code );
 
 CREATE TABLE customerzip (
     cust_id   INTEGER NOT NULL,
-    zip_code  INTEGER NOT NULL
+    zip_code  VARCHAR2(20) NOT NULL
 );
 
 ALTER TABLE customerzip ADD CONSTRAINT customerzip_pk PRIMARY KEY ( zip_code,
