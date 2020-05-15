@@ -111,7 +111,7 @@ CREATE TABLE customergame (
     publisher  VARCHAR2(75) NOT NULL,
     platform   VARCHAR2(50) NOT NULL,
     region     VARCHAR2(5) NOT NULL,
-    price      NUMBER(2, 4)
+    price      DECIMAL(5, 2)
 );
 
 ALTER TABLE customergame
