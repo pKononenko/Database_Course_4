@@ -18,7 +18,6 @@ AFTER INSERT
 FOR EACH ROW
 DECLARE
     game_name_inserted GAME.game_name%TYPE;
-    counter INTEGER;
 BEGIN
     game_name_inserted := :new.game_name;
 
