@@ -2,6 +2,12 @@
 SET DEFINE ON;
 SET SERVEROUTPUT ON;
 
+BEGIN
+    DBMS_OUTPUT.ENABLE;
+END;
+
+/
+
 -- Реалізація тригеру
 -- ЗАВДАННЯ: При додаванні нового запису Game
 -- вказує цій грі жанр "General"
