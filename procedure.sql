@@ -1,4 +1,4 @@
--- PROCEDURE
+
 
 CREATE OR REPLACE PROCEDURE ADD_GAME_TO_CUSTOMER
 (
@@ -36,9 +36,9 @@ BEGIN
     FROM 
         GAMEPLATFORM
     WHERE
-        GAMEPLATFORM.GAME_NAME = game_name_proc
-        AND GAMEPLATFORM.PUBLISHER = publisher_proc
-        AND GAMEPLATFORM.PLATFORM = platform_proc;    
+        TRIM(GAMEPLATFORM.GAME_NAME) = TRIM(game_name_proc)
+        AND TRIM(GAMEPLATFORM.PUBLISHER) = TRIM(publisher_proc)
+        AND TRIM(GAMEPLATFORM.PLATFORM) = TRIM(platform_proc);    
         
     INSERT INTO CUSTOMERGAME
     VALUES
@@ -59,4 +59,3 @@ EXCEPTION
         DBMS_OUTPUT.put_line('No user with id: '||cust_id_proc||' or game with name: '||game_name_proc||'; publisher: '||publisher_proc||'; platform: '||platform_proc||' was found.');
     
 END;
-
