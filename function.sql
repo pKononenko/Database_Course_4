@@ -1,7 +1,7 @@
 -- Якщо тип не заміняється
-/*DROP VIEW GAMEDATA;
-DROP TYPE publisher_platform_row_table;
-DROP TYPE publisher_platform_row;*/
+-- DROP VIEW GAMEDATA;
+-- DROP TYPE publisher_platform_row_table;
+-- DROP TYPE publisher_platform_row;
 
 
 -- Трохи перероблене VIEW з 3ЛР
